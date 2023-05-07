@@ -63,11 +63,11 @@ if st.button('Key Events'):
   conversations = []
   st.write("*Time to generate*: " + str(round(end-start,2)) + " seconds")
 
-if st.button('Sentiment'):
+if st.button('Bias Check'):
   start = time.time()
-  prompt_text = "Describe the tone of and highlight possible biases"
+  prompt_text = "Highlight possible biases"
   prompt = prompt_text + ":\n" + input_text
-  conversations.append({'role': 'system', 'content': 'You are my helpful reading assistant. You will read the text I provide. Describe the tone and highlight possible biases.'})
+  conversations.append({'role': 'system', 'content': 'You are my helpful reading assistant. You will read the text I provide. Highlight possible biases.'})
   conversations.append({'role': 'user', 'content': prompt})
   conversations = chatgpt_conversation(conversations)
   output_text = conversations[-1]['content']
