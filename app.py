@@ -7,10 +7,10 @@ import streamlit as st
 API_KEY = os.environ["OPENAI_KEY"]
 openai.api_key = API_KEY
 
-st.write("**Readhacker** version 0.1 by Sherwood Analytica")
+st.write("**Readhacker** version 0.1 by **Sherwood Analytica**")
 model_id = 'gpt-4'
 temperature = 0.0
-input_text = st.text_area('I am your helpful GPT4-powered reading assistant. Enter the text that you want me to analyse for you.', '')
+input_text = st.text_area('I am your helpful AI-powered reading assistant. Enter the text that you want me to analyse for you.', '')
 conversations = []
 
 def chatgpt_conversation(conversation_log):
@@ -103,7 +103,7 @@ if st.button('Alternative'):
   conversations = []
   st.write("*Time to generate*: " + str(round(end-start,2)) + " seconds")
 
-prompt_text_input = st.text_input('Customise your prompt', 'Assign a grading between A+ to F, and explain why')
+prompt_text_input = st.text_input('Customise your prompt:', 'Assign a grading between A+ to F, and explain why')
 if st.button('Customise'):
   start = time.time()
   prompt_text = prompt_text_input
