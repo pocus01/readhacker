@@ -20,7 +20,8 @@ def chatgpt_conversation(conversation_log):
     })
     return conversation_log
 
-st.write("**Readhacker** version 0.01 by citizen developer Loy Hui Chien")
+st.write("**Readhacker** version 0.01"
+st.write("*by citizen developer Loy Hui Chien*")
 input_text = st.text_area('I am your helpful GPT4-powered reading assistant. Enter the text that you want me to analyse for you...', '')
 conversations = []
 
