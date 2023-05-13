@@ -26,9 +26,9 @@ conversations = []
 
 if st.button('Summarise'):
   start = time.time()
-  prompt_text = "Generate a concise summary"
+  prompt_text = "Generate a concise and coherent summary"
   prompt = prompt_text + ":\n" + input_text
-  conversations.append({'role': 'system', 'content': 'You are my helpful reading assistant. You will read the text I provide and generate a concise summary.'})
+  conversations.append({'role': 'system', 'content': 'You are my helpful reading assistant. You will read the text I provide and generate a concise and coherent summary.'})
   conversations.append({'role': 'user', 'content': prompt})
   conversations = chatgpt_conversation(conversations)
   output_text = conversations[-1]['content']
@@ -39,7 +39,7 @@ if st.button('Summarise'):
 
 if st.button('Key Trends'):
   start = time.time()
-  prompt_text = "Extract key trends and figures"
+  prompt_text = "Using bullet points, extract key trends and data"
   prompt = prompt_text + ":\n" + input_text
   conversations.append({'role': 'system', 'content': 'You are my helpful reading assistant. You will read the text I provide and generate a list of key trends in bullet points.'})
   conversations.append({'role': 'user', 'content': prompt})
@@ -50,7 +50,7 @@ if st.button('Key Trends'):
   conversations = []
   st.write("*Time to generate*: " + str(round(end-start,2)) + " seconds")
 
-if st.button('Key Events'):
+if st.button('All Events'):
   start = time.time()
   prompt_text = "Generate a timeline of events"
   prompt = prompt_text + ":\n" + input_text
