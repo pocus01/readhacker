@@ -9,7 +9,7 @@ openai.api_key = API_KEY
 
 st.write("**Readhacker** version 0.1 by Sherwood Analytica")
 model_id = 'gpt-4'
-temperature = st.slider("Conservative and Coherent to Creative and Diverse", 0.0, 1.0, 0.3, 0.1)
+temperature = st.slider("Set temperature: lower = more conservative and coherent, higher = more creative and random", 0.0, 1.0, 0.3, 0.1)
 input_text = st.text_area('I am your helpful GPT4-powered reading assistant. Enter the text that you want me to analyse for you.', '')
 conversations = []
 
