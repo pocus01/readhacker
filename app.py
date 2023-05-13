@@ -6,7 +6,7 @@ import streamlit as st
 
 API_KEY = os.environ["OPENAI_KEY"]
 openai.api_key = API_KEY
-model_id = 'gpt-3.5-turbo'
+model_id = 'gpt-4'
 
 def chatgpt_conversation(conversation_log):
     response = openai.ChatCompletion.create(
@@ -21,7 +21,7 @@ def chatgpt_conversation(conversation_log):
     return conversation_log
 
 st.write("**Readhacker** version 0.01 by citizen developer Loy Hui Chien")
-input_text = st.text_area('I am your helpful GPT3.5-powered reading assistant. Enter the text that you want me to analyse for you...', '')
+input_text = st.text_area('I am your helpful GPT4-powered reading assistant. Enter the text that you want me to analyse for you...', '')
 conversations = []
 
 if st.button('Summarise'):
