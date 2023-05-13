@@ -6,8 +6,8 @@ These include:
 
 1. Summarize the text
 2. Extract the key trends and data
-3. Generate a timeline of events
-4. Check for potential biases
-5. Assess the implications
-6. Offer contrarian views
-7. Highlight missing angles
+3. Check for potential biases
+4. Assess the implications
+5. Offer contrarian views
+6. Highlight missing angles
+7. Customise a prompt
