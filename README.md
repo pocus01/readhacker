@@ -11,4 +11,3 @@ These include:
 5. Assess the implications
 6. Offer contrarian views
 7. Highlight missing angles
-8. 
