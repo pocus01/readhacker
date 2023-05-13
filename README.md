@@ -1,4 +1,4 @@
-# Readhacker v0.01
+# Readhacker v0.1
 
 Readhacker is an experiment in prototyping an AI-powered reading assistant webapp.
 You provide the text. The current app version offers several options to analyse the text.
