@@ -7,7 +7,7 @@ import streamlit as st
 API_KEY = os.environ["OPENAI_KEY"]
 openai.api_key = API_KEY
 model_id = 'gpt-4'
-temperature = 0.3
+temperature = st_slider("Conservative and Coherent to Creative and Diverse", 0.0, 1.0, 0.3, 0.1)
 
 def chatgpt_conversation(conversation_log):
     response = openai.ChatCompletion.create(
