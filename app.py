@@ -8,7 +8,7 @@ API_KEY = os.environ["OPENAI_KEY"]
 openai.api_key = API_KEY
 
 st.write("**Readhacker** version 0.1 by **Sherwood Analytica**")
-model_id = 'gpt-4'
+model_id = 'gpt-4-32k'
 temperature = 0.0
 input_text = st.text_area('I am your helpful AI-powered reading assistant. Enter the text that you want me to analyse for you.', '')
 conversations = []
