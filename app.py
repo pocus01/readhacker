@@ -7,7 +7,7 @@ import streamlit as st
 API_KEY = os.environ["OPENAI_KEY"]
 openai.api_key = API_KEY
 
-st.write("**Readhacker** version 0.1 by **Sherwood Analytica**")
+st.write("**Readhacker** beta version 0.1 by **Sherwood Analytica**")
 model_id = st.radio('GPT-4 takes longer input and gives better output while GPT-3.5 is faster', ('gpt-4','gpt-3.5-turbo'))
 temperature = 0
 #temperature = st.slider('Increase temperature for more creative output',0.0,1.0,0.1,0.1)
@@ -52,11 +52,11 @@ if st.button('Key Trends'):
   conversations = []
   st.write("*Time to generate*: " + str(round(end-start,2)) + " seconds")
 
-if st.button('Bias Check'):
+if st.button('Implication'):
   start = time.time()
-  prompt_text = "Highlight any possible biases"
+  prompt_text = "Assess the implications"
   prompt = prompt_text + ":\n" + input_text
-  conversations.append({'role': 'system', 'content': 'You are my helpful reading assistant. You will read the text I provide and highlight any possible biases.'})
+  conversations.append({'role': 'system', 'content': 'You are my helpful reading assistant. You will read the text I provide and assess the implications.'})
   conversations.append({'role': 'user', 'content': prompt})
   conversations = chatgpt_conversation(conversations)
   output_text = conversations[-1]['content']
@@ -65,11 +65,11 @@ if st.button('Bias Check'):
   conversations = []
   st.write("*Time to generate*: " + str(round(end-start,2)) + " seconds")
 
-if st.button('Implication'):
+if st.button('Bias Check'):
   start = time.time()
-  prompt_text = "Assess the implications"
+  prompt_text = "Highlight any possible biases"
   prompt = prompt_text + ":\n" + input_text
-  conversations.append({'role': 'system', 'content': 'You are my helpful reading assistant. You will read the text I provide and assess the implications.'})
+  conversations.append({'role': 'system', 'content': 'You are my helpful reading assistant. You will read the text I provide and highlight any possible biases.'})
   conversations.append({'role': 'user', 'content': prompt})
   conversations = chatgpt_conversation(conversations)
   output_text = conversations[-1]['content']
