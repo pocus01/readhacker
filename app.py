@@ -8,8 +8,9 @@ API_KEY = os.environ["OPENAI_KEY"]
 openai.api_key = API_KEY
 
 st.write("**Readhacker** version 0.1 by **Sherwood Analytica**")
-model_id = st.radio('GPT-4 can take longer input while GPT-3.5 is faster', ('gpt-4','gpt-3.5-turbo'))
-temperature = st.slider('Increase temperature for more creative output',0.0,1.0,0.1,0.1)
+model_id = st.radio('GPT-4 takes longer input and gives better output while GPT-3.5 is faster', ('gpt-4','gpt-3.5-turbo'))
+temperature = 0
+#temperature = st.slider('Increase temperature for more creative output',0.0,1.0,0.1,0.1)
 input_text = st.text_area('I am your helpful AI-powered reading assistant. Enter the text that you want me to analyse for you.', '')
 conversations = []
 
