@@ -39,11 +39,11 @@ if st.button('Summarise'):
   conversations = []
   st.write("*Time to generate*: " + str(round(end-start,2)) + " seconds")
 
-if st.button('Key Trends'):
+if st.button('Key Points'):
   start = time.time()
-  prompt_text = "Extract key trends and data"
+  prompt_text = "Using bullet points, summarize the text"
   prompt = prompt_text + ":\n" + input_text
-  conversations.append({'role': 'system', 'content': 'You are my helpful reading assistant. You will read the text I provide and generate a list of key trends and data in bullet points.'})
+  conversations.append({'role': 'system', 'content': 'You are my helpful reading assistant. You will read the text I provide and summarize into bullet points. Identify the main ideas and key details in the text, and condense them into concise bullet points. Recognize the overall structure of the text and create bullet points that reflect this structure. The output should be presented in a clear and organized way. Do not start with any titles.'})
   conversations.append({'role': 'user', 'content': prompt})
   conversations = chatgpt_conversation(conversations)
   output_text = conversations[-1]['content']
