@@ -7,7 +7,7 @@ import streamlit as st
 API_KEY = os.environ["OPENAI_KEY"]
 openai.api_key = API_KEY
 
-st.write("**Readhacker** Beta 0.1 : An AI-Powered Reading Assistant By **Sherwood Analytica**")
+st.write("**Readhacker** Beta : AI-Powered Reading Assistant By **Sherwood Analytica**")
 model_id = st.radio("Compared to GPT-3.5, GPT-4 is smarter and can handle longer inputs, while GPT-3.5 is faster at generating responses. Exceeding the length limit will result in error. Select a suitable Large Language Model for your AI-powered reading:", ('gpt-4','gpt-3.5-turbo'))
 temperature = 0
 #temperature = st.slider('Increase temperature for more creative output',0.0,1.0,0.1,0.1)
