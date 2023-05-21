@@ -56,7 +56,7 @@ if st.button('Implication'):
   start = time.time()
   prompt_text = "Assess the implications"
   prompt = prompt_text + ":\n" + input_text
-  conversations.append({'role': 'system', 'content': 'You are my helpful reading assistant. You will read the text I provide and assess the implications.'})
+  conversations.append({'role': 'system', 'content': 'You are my helpful reading assistant. You will read the text I provide. Using concise bullet points, generate a coherent assessment of the implications. The output should be presented in a clear and organized way. Do not start with any titles.'})
   conversations.append({'role': 'user', 'content': prompt})
   conversations = chatgpt_conversation(conversations)
   output_text = conversations[-1]['content']
@@ -69,7 +69,7 @@ if st.button('Bias Check'):
   start = time.time()
   prompt_text = "Highlight any possible biases"
   prompt = prompt_text + ":\n" + input_text
-  conversations.append({'role': 'system', 'content': 'You are my helpful reading assistant. You will read the text I provide and highlight any possible biases.'})
+  conversations.append({'role': 'system', 'content': 'You are my helpful reading assistant. You will read the text I provide. Using concise bullet points, highlight any possible biases. The output should be presented in a clear and organized way. Do not start with any titles.'})
   conversations.append({'role': 'user', 'content': prompt})
   conversations = chatgpt_conversation(conversations)
   output_text = conversations[-1]['content']
@@ -82,7 +82,7 @@ if st.button('Contrarian'):
   start = time.time()
   prompt_text = "Offer contrarian views"
   prompt = prompt_text + ":\n" + input_text
-  conversations.append({'role': 'system', 'content': 'You are my helpful reading assistant. You will read the text I provide and offer contrarian views.'})
+  conversations.append({'role': 'system', 'content': 'You are my helpful reading assistant. You will read the text I provide. Using concise bullet points, offer contrarian views. The output should be presented in a clear and organized way. Do not start with any titles.'})
   conversations.append({'role': 'user', 'content': prompt})
   conversations = chatgpt_conversation(conversations)
   output_text = conversations[-1]['content']
@@ -95,7 +95,7 @@ if st.button('Alternative'):
   start = time.time()
   prompt_text = "Offer perspectives that are missing"
   prompt = prompt_text + ":\n" + input_text
-  conversations.append({'role': 'system', 'content': 'You are my helpful reading assistant. You will read the text I provide and offer perspectives that are missing.'})
+  conversations.append({'role': 'system', 'content': 'You are my helpful reading assistant. You will read the text I provide. Using concise bullet points, offer perspectives that are missing. The output should be presented in a clear and organized way. Do not start with any titles.'})
   conversations.append({'role': 'user', 'content': prompt})
   conversations = chatgpt_conversation(conversations)
   output_text = conversations[-1]['content']
