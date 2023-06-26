@@ -52,6 +52,7 @@ if st.button('Main Points'):
   st.write(output_text)
   conversations = []
   st.write("*Time to generate*: " + str(round(end-start,2)) + " seconds")
+  st.download_button(':clipboard:', output_text)
 
 if st.button('Implication'):
   start = time.time()
@@ -65,6 +66,7 @@ if st.button('Implication'):
   st.write(output_text)
   conversations = []
   st.write("*Time to generate*: " + str(round(end-start,2)) + " seconds")
+  st.download_button(':clipboard:', output_text)
 
 if st.button('Bias Check'):
   start = time.time()
@@ -78,6 +80,7 @@ if st.button('Bias Check'):
   st.write(output_text)
   conversations = []
   st.write("*Time to generate*: " + str(round(end-start,2)) + " seconds")
+  st.download_button(':clipboard:', output_text)
 
 if st.button('Contrarian'):
   start = time.time()
@@ -91,6 +94,7 @@ if st.button('Contrarian'):
   st.write(output_text)
   conversations = []
   st.write("*Time to generate*: " + str(round(end-start,2)) + " seconds")
+  st.download_button(':clipboard:', output_text)
 
 if st.button('Alternative'):
   start = time.time()
@@ -104,6 +108,7 @@ if st.button('Alternative'):
   st.write(output_text)
   conversations = []
   st.write("*Time to generate*: " + str(round(end-start,2)) + " seconds")
+  st.download_button(':clipboard:', output_text)
 
 prompt_text_input = st.text_input('Customise your prompt:', 'Assign a grading between A+ to F, and explain why')
 if st.button('Customise'):
@@ -118,3 +123,4 @@ if st.button('Customise'):
   st.write(output_text)
   conversations = []
   st.write("*Time to generate*: " + str(round(end-start,2)) + " seconds")
+  st.download_button(':clipboard:', output_text)
