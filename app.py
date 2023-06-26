@@ -14,10 +14,6 @@ temperature = 0
 input_text = st.text_area("I am your AI-powered reading assistant. Whether it\'s a news article, speech, or commentary, I\'ll do my best to assist you. My average processing time is usually less than one minute. Enter the text you want me to analyse in the box below:")
 conversations = []
 
-uploaded_file = st.file_uploader(":open_file_folder:")
-if uploaded_file is not None:
-    st.write("filename:", uploaded_file.name)
-
 def chatgpt_conversation(conversation_log):
     response = openai.ChatCompletion.create(
         model = model_id,
