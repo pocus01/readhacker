@@ -38,6 +38,7 @@ if st.button('Summarise'):
   st.write(output_text)
   conversations = []
   st.write("*Time to generate*: " + str(round(end-start,2)) + " seconds")
+  st.download_button('Download', output_text)
 
 if st.button('Main Points'):
   start = time.time()
