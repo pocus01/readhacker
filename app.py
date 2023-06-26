@@ -15,7 +15,8 @@ input_text = st.text_area("I am your AI-powered reading assistant. Whether it\'s
 conversations = []
 
 uploaded_file = st.file_uploader(":open_file_folder:")
-st.write("filename:", uploaded_file.name)
+if uploaded_file is not None:
+    st.write("filename:", uploaded_file.name)
 
 def chatgpt_conversation(conversation_log):
     response = openai.ChatCompletion.create(
@@ -30,18 +31,18 @@ def chatgpt_conversation(conversation_log):
     return conversation_log
 
 if st.button('Summarise'):
-  start = time.time()
-  prompt_text = "Generate a concise and coherent summary"
-  prompt = prompt_text + ":\n" + input_text
-  conversations.append({'role': 'system', 'content': 'You are my helpful reading assistant. You will read the text I provide and generate a concise and coherent summary.'})
-  conversations.append({'role': 'user', 'content': prompt})
-  conversations = chatgpt_conversation(conversations)
-  output_text = conversations[-1]['content']
-  end = time.time()
-  st.write(output_text)
-  conversations = []
-  st.write("*Time to generate*: " + str(round(end-start,2)) + " seconds")
-  st.download_button(':scroll:', output_text)
+    start = time.time()
+    prompt_text = "Generate a concise and coherent summary"
+    prompt = prompt_text + ":\n" + input_text
+    conversations.append({'role': 'system', 'content': 'You are my helpful reading assistant. You will read the text I provide and generate a concise and coherent summary.'})
+    conversations.append({'role': 'user', 'content': prompt})
+    conversations = chatgpt_conversation(conversations)
+    output_text = conversations[-1]['content']
+    end = time.time()
+    st.write(output_text)
+    conversations = []
+    st.write("*Time to generate*: " + str(round(end-start,2)) + " seconds")
+    st.download_button(':scroll:', output_text)
 
 if st.button('Main Points'):
   start = time.time()
